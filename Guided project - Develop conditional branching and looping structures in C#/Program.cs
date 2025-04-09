@@ -120,7 +120,19 @@ do
 
         case "2":
             //Add a new animal friend to the ourAnimals array
-            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+            string anotherPet = "y";
+            int petCount = 0;
+            for (int i = 0; i < maxPets; i++){
+                if (ourAnimals[i,0] != "ID #: "){
+                    petCount += 1;
+                }
+            }
+            if (petCount < maxPets){
+                Console.WriteLine($"We currently have {petCount} pets that need homes. We can manage {(maxPets-petCount)} more.");
+            } 
+            while (anotherPet == "y" && petCount < maxPets){
+                
+            }
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
