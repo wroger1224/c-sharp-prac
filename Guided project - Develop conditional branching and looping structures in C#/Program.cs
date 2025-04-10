@@ -141,6 +141,7 @@ do
             {
                 // increment petCount (the array is zero-based, so we increment the counter after adding to the array)
                 petCount = petCount + 1;
+
                 // check maxPet limit
                 if (petCount < maxPets)
                 {
@@ -155,7 +156,9 @@ do
                         }
 
                     } while (anotherPet != "y" && anotherPet != "n");
+
                     bool validEntry = false;
+
                     //get species cat/dog - string animalSpecies is a required field
                     do
                     {
@@ -172,10 +175,22 @@ do
                             else validEntry = true;
                         }
                     } while (validEntry == false);
+
                     //build the ID # for the animal. ex: C1,C2, D3
                     animalID = animalSpecies.Substring(0,1) + (petCount + 1).ToString();
+
+                    //get pet's age, can be ?
+                    do {
+                        int petAge;
+                        Console.WriteLine("Enter the pet's age or enter ? if unknown");
+                        readResult = Console.ReadLine();
+                        if (readResult != null) animalAge = readResult;
+                        if (animalAge != "?") validEntry = int.TryParse(animalAge, out petAge);
+                        else validEntry = true;
+                    }while (validEntry == false);
                 }
             }
+            
             if (petCount >= maxPets)
             {
                 Console.WriteLine("We have reached our limit on the number of pets that we can manage.");
