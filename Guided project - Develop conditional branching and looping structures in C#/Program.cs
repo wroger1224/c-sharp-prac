@@ -121,6 +121,7 @@ do
             readResult = Console.ReadLine();
             break;
 
+
         case "2":
             //Add a new animal friend to the ourAnimals array
             string anotherPet = "y";
@@ -171,6 +172,8 @@ do
                             else validEntry = true;
                         }
                     } while (validEntry == false);
+                    //build the ID # for the animal. ex: C1,C2, D3
+                    animalID = animalSpecies.Substring(0,1) + (petCount + 1).ToString();
                 }
             }
             if (petCount >= maxPets)
@@ -180,6 +183,7 @@ do
                 readResult = Console.ReadLine();
             }
             break;
+
 
         case "3":
             //Ensure animal ages and physical descriptions are complete 
