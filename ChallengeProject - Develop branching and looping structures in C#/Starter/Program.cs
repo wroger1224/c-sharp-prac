@@ -20,7 +20,11 @@ int petAge = 0;
 
 // array used to store runtime data, there is no persisted data
 string[,] ourAnimals = new string[maxPets, 6];
+<<<<<<< HEAD
 //hello
+=======
+
+>>>>>>> 32372d9d204d5adddafff8e9be661b3cab6a47c6
 // create some initial ourAnimals array entries
 for (int i = 0; i < maxPets; i++)
 {
