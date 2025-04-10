@@ -188,9 +188,19 @@ do
                         if (animalAge != "?") validEntry = int.TryParse(animalAge, out petAge);
                         else validEntry = true;
                     }while (validEntry == false);
+
+                    // get a description of the pet's physical appearance/condition - animalPhysicalDescription can be blank.
+                    do {
+                        Console.WriteLine("Enter a physical description of the pet (size, color, gender, weight, housebroken)");
+                        readResult = Console.ReadLine();
+                        if (readResult != null) { 
+                            animalPhysicalDescription = readResult.ToLower();
+                            if (animalPhysicalDescription == "") animalPhysicalDescription = "tbd";
+                        }
+                    }while (animalPhysicalDescription == "");
                 }
             }
-            
+
             if (petCount >= maxPets)
             {
                 Console.WriteLine("We have reached our limit on the number of pets that we can manage.");
