@@ -170,44 +170,64 @@ do
                             if (animalSpecies != "dog" && animalSpecies != "cat")
                             {
                                 //Console.WriteLine($"You entered: {animalSpecies}.");
-                                validEntry = false; 
+                                validEntry = false;
                             }
                             else validEntry = true;
                         }
                     } while (validEntry == false);
 
                     //build the ID # for the animal. ex: C1,C2, D3
-                    animalID = animalSpecies.Substring(0,1) + (petCount + 1).ToString();
+                    animalID = animalSpecies.Substring(0, 1) + (petCount + 1).ToString();
 
                     //get pet's age, can be ?
-                    do {
+                    do
+                    {
                         int petAge;
                         Console.WriteLine("Enter the pet's age or enter ? if unknown");
                         readResult = Console.ReadLine();
                         if (readResult != null) animalAge = readResult;
                         if (animalAge != "?") validEntry = int.TryParse(animalAge, out petAge);
                         else validEntry = true;
-                    }while (validEntry == false);
+                    } while (validEntry == false);
 
                     // get a description of the pet's physical appearance/condition - animalPhysicalDescription can be blank.
-                    do {
+                    do
+                    {
                         Console.WriteLine("Enter a physical description of the pet (size, color, gender, weight, housebroken)");
                         readResult = Console.ReadLine();
-                        if (readResult != null) { 
+                        if (readResult != null)
+                        {
                             animalPhysicalDescription = readResult.ToLower();
                             if (animalPhysicalDescription == "") animalPhysicalDescription = "tbd";
                         }
-                    }while (animalPhysicalDescription == "");
+                    } while (animalPhysicalDescription == "");
 
                     // get a description of the pet's personality - animalPersonalityDescription can be blank.
-                    do {
+                    do
+                    {
                         Console.WriteLine("Enter a description of the pet's personality (likes or dislikes, tricks, energy level)");
                         readResult = Console.ReadLine();
-                        if (readResult != null){
+                        if (readResult != null)
+                        {
                             animalPhysicalDescription = readResult.ToLower();
                             if (animalPhysicalDescription == "") animalPersonalityDescription = "tbd";
                         }
-                    }while (animalPersonalityDescription == "");
+                    } while (animalPersonalityDescription == "");
+
+                    // get the pet's nickname. animalNickname can be blank.
+                    do
+                    {
+                        Console.WriteLine("Enter a nickname for the pet");
+                        readResult = Console.ReadLine();
+                        if (readResult != null)
+                        {
+                            animalNickname = readResult.ToLower();
+                            if (animalNickname == "")
+                            {
+                                animalNickname = "tbd";
+                            }
+                        }
+                    } while (animalNickname == "");
                 }
             }
 
