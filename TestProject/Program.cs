@@ -107,6 +107,40 @@
     }
     //Exercise - Examine the TryParse() method
     {
+        //TryParse() a string into an int
+        string value = "bad";
+        int result = 0;
+        if (int.TryParse(value, out result))
+        {
+            Console.WriteLine($"Measurement: {result}");
+        }
+        else
+        {
+            Console.WriteLine("Unable to report the measurement");
+        }
+        if (result > 0)
+            Console.WriteLine($"Measurement (w/ offeset): {50 + result}");
+    }
+    //Exercise - Complete a challenge to combine string array values as strings and as integers
+    {
+        string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+        double result = 0;
+        double total = 0;
+        string message = "";
 
+        foreach (string value in values)
+        {
+
+            if (double.TryParse(value, out result))
+            {
+                total += result;
+            }
+            else
+            {
+                message += value;
+            }
+        }
+        Console.WriteLine($"Message: {message}");
+        Console.WriteLine($"Total: {total}");
     }
 }
