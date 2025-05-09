@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\TestProject\\TestProject.csproj": {}
+    "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\CodeWarsTraining\\TestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\TestProject\\TestProject.csproj": {
+    "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\CodeWarsTraining\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\CodeWarsTraining\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\TestProject\\TestProject.csproj",
+        "projectPath": "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\CodeWarsTraining\\TestProject.csproj",
         "packagesPath": "C:\\Users\\wroge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\TestProject\\obj\\",
+        "outputPath": "C:\\Users\\wroge\\OneDrive\\Desktop\\Coding\\c-sharp-prac\\MS Learn Files\\c-sharp-prac\\CodeWarsTraining\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
