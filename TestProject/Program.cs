@@ -274,7 +274,41 @@
         Console.WriteLine(result); */
     }
 
+    //Exercise - Complete a challenge to parse a string of orders, sort the orders and tag possible errors
+    {
+        string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
 
+        string[] orderID = orderStream.Split(',');
+        Array.Sort(orderID);
+
+        for (int i = 0; i < orderID.Length; i++)
+        {
+            int count = orderID[i].Count();
+            if (count != 4)
+            {
+                orderID[i] += "\t- Error";
+            }
+            Console.WriteLine($"{orderID[i]}");
+        }
+
+        //MS Learn Solution:
+        /* 
+        string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+        string[] items = orderStream.Split(',');
+        Array.Sort(items);
+
+        foreach (var item in items)
+        {
+            if (item.Length == 4)
+            {
+                Console.WriteLine(item);
+            }
+            else
+            {
+                Console.WriteLine(item + "\t- Error");
+            }
+        } */
+    }
 }
 
 
