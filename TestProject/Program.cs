@@ -402,7 +402,7 @@
 
 }
 
-{ //Work with variable data in C# console applications 
+{ //Modify the content of strings using built-in string data type methods in C# 
     //Exercise - Use the string's IndexOf() and Substring() helper methods
     {
         /* string message = "What is the value <span>between the tags</span>?";
@@ -413,7 +413,7 @@
         int openingPosition = message.IndexOf(openSpan);
         int closingPosition = message.IndexOf(closeSpan);
 
-        openingPosition += 6;
+        openingPosition += 6; //this # is the length of <span>. without it, you will be given <span> as part of your answer
 
         int length = closingPosition - openingPosition;
         Console.WriteLine(message.Substring(openingPosition, length)); */
@@ -486,6 +486,93 @@
             Console.WriteLine(message.Substring(openingPosition, length));
         } */
     }
+    //Exercise - Use the Remove() and Replace() methods
+    {
+        /* string data = "12345John Smith          5000  3  ";
+        string updatedData = data.Remove(5, 20);
+        Console.WriteLine(updatedData); */
+
+        /* string message = "This--is--ex-amp-le--data";
+        message = message.Replace("--", " ");
+        message = message.Replace("-", "");
+        Console.WriteLine(message); */
+    }
+    //Exercise - Complete a challenge to extract, replace, and remove data from an input string
+    {
+        /* string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+
+        string quantity = "";
+        string output = "";
+
+        //Work here
+
+        //Extract Quantity
+        string open = "<span>";
+        string close = "</span>";
+
+        int openingPosition = input.IndexOf(open);
+        int closingPosition = input.IndexOf(close);
+        openingPosition += 6;
+
+        int length = closingPosition - openingPosition;
+
+        quantity = "Quantity: " + input.Substring(openingPosition, length);
+
+        open = "<div>";
+        close = "</div>";
+
+        openingPosition = input.IndexOf(open);
+        closingPosition = input.IndexOf(close);
+        openingPosition += 5;
+
+        length = closingPosition - openingPosition;
+
+        input = input.Replace("&trade;", "&reg;");
+
+        output = "Output: " + input.Substring(openingPosition, length);
+
+        Console.WriteLine(quantity);
+        Console.WriteLine(output); */
+
+        //their answer (you still got it right!):
+
+        /*  const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+
+         string quantity = "";
+         string output = "";
+
+         // Your work here
+
+         // Extract the "quantity"
+         const string openSpan = "<span>";
+         const string closeSpan = "</span>";
+
+         int quantityStart = input.IndexOf(openSpan) + openSpan.Length; // + length of <span> so index at end of <span> tag
+         int quantityEnd = input.IndexOf(closeSpan);
+         int quantityLength = quantityEnd - quantityStart;
+         quantity = input.Substring(quantityStart, quantityLength);
+         quantity = $"Quantity: {quantity}";
+
+         // Set output to input, replacing the trademark symbol with the registered trademark symbol
+         const string tradeSymbol = "&trade;";
+         const string regSymbol = "&reg;";
+         output = input.Replace(tradeSymbol, regSymbol);
+
+         // Remove the opening <div> tag
+         const string openDiv = "<div>";
+         int divStart = output.IndexOf(openDiv);
+         output = output.Remove(divStart, openDiv.Length);
+
+         // Remove the closing </div> tag and add "Output:" to the beginning
+         const string closeDiv = "</div>";
+         int divCloseStart = output.IndexOf(closeDiv);
+         output = "Output: " + output.Remove(divCloseStart, closeDiv.Length);
+
+         Console.WriteLine(quantity);
+         Console.WriteLine(output); */
+    }
+
+
 }
 
 
