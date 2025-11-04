@@ -902,7 +902,89 @@ using System.Windows.Markup;
                 for (int i = 0; i < count; i++) Console.WriteLine(rsvps[i]);
             } */
         }
+        //Exercise - Complete the challenge to display email addresses
+        {
+            /* string[,] corporate =
+            {
+                {"Robert", "Bavin"}, {"Simon", "Bright"},
+                {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+                {"Sarah", "Delucchi"}, {"Sinan", "Ali"}
+            };
+
+            string[,] external =
+            {
+                {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+                {"Shay", "Lawrence"}, {"Daren", "Valdes"}
+            };
+
+            string externalDomain = "hayworth.com";
+            string corporateDomain = "contoso.com";
+            string username = "";
+            string fullEmailAddress = "";
+
+            for (int i = 0; i < corporate.GetLength(0); i++)
+            {
+                // display internal email addresses
+                Username(corporate[i, 0], corporate[i, 1], length: (corporate[i, 0].Length - 2));
+                EmailAddress(username, corporateDomain);
+                Console.WriteLine(fullEmailAddress);
+            }
+
+            for (int i = 0; i < external.GetLength(0); i++)
+            {
+                // display external email addresses
+                Username(external[i, 0], external[i, 1], length: (external[i, 0].Length - 2));
+                EmailAddress(username, externalDomain);
+                Console.WriteLine(fullEmailAddress);
+            }
+
+            void Username(string firstName, string lastName, int length)
+            {
+                username = firstName.ToLower().Remove(2, length) + lastName.ToLower();
+                return;
+            }
+
+            void EmailAddress(string username, string domain)
+            {
+                fullEmailAddress = username + "@" + domain;
+                return;
+            } */
+            // You got it! Their solution was different:
+            {/* string[,] corporate =
+                {
+        {"Robert", "Bavin"}, {"Simon", "Bright"},
+        {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+        {"Sarah", "Delucchi"}, {"Sinan", "Ali"}};
+
+            string[,] external =
+            {
+        {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+        {"Shay", "Lawrence"}, {"Daren", "Valdes"}
+    };
+
+            string externalDomain = "hayworth.com";
+
+            for (int i = 0; i < corporate.GetLength(0); i++)
+            {
+                DisplayEmail(first: corporate[i, 0], last: corporate[i, 1]);
+            }
+
+            for (int i = 0; i < external.GetLength(0); i++)
+            {
+                DisplayEmail(first: external[i, 0], last: external[i, 1], domain: externalDomain);
+            }
+
+            void DisplayEmail(string first, string last, string domain = "contoso.com")
+            {
+                string email = first.Substring(0, 2) + last;
+                email = email.ToLower();
+                Console.WriteLine($"{email}@{domain}");
+            } */
+            }
+        }
+
     }
+    //Create C# methods that return values
 }
 
 
