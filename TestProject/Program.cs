@@ -1,4 +1,5 @@
 ﻿//Choose the correct data type
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows.Markup;
 
@@ -1092,7 +1093,7 @@ using System.Windows.Markup;
         //Exercise - Return arrays from methods
         {
             //Had to start over since i took a big break
-            int target = 80;
+            /*int target = 80;
             int[] coins = new int[] { 5, 5, 50, 25, 25, 10, 5 };
             int[,] result = TwoCoins(coins, target);
 
@@ -1128,9 +1129,58 @@ using System.Windows.Markup;
                     }
                 }
                 return (count == 0) ? new int[0, 0] : result;
+            }*/
+
+
+        }
+        //Exercise - Complete the challenge to add methods to make the game playable
+        {
+            Random random = new Random();
+
+            Console.WriteLine("Would you like to play? (Y/N)");
+            if (ShouldPlay())
+            {
+                PlayGame();
             }
 
+            void PlayGame()
+            {
+                var play = true;
 
+                while (play)
+                {
+                    int target = random.Next(1, 6);
+                    int roll = random.Next(1, 7);
+
+                    Console.WriteLine($"Roll a number greater than {target} to win!");
+                    Console.WriteLine($"You rolled a {roll}");
+                    Console.WriteLine(WinOrLose(target, roll));
+                    Console.WriteLine("\nPlay again? (Y/N)");
+
+                    play = ShouldPlay();
+                }
+            }
+
+            bool ShouldPlay()
+            {
+                string input = Console.ReadLine().ToLower();
+
+                if (input == "n") return false;
+                else return true;
+
+            }
+
+            string WinOrLose(int target, int roll)
+            {
+                if (roll > target)
+                {
+                    return "You won!";
+                }
+                return "You lost!";
+
+
+
+            }
         }
     }
 }
